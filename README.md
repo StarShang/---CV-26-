@@ -13,6 +13,9 @@
 -------
 VIMER-UFO（UFO：Unified Feature Optimization） All in One 多任务训练方案，通过使用多个任务的数据训练一个功能强大的通用模型，可被直接应用于处理多个任务。不仅通过跨任务的信息提升了单个任务的效果，并且免去了下游任务 fine-tuning 过程。VIMER-UFO All in One 研发模式可被广泛应用于各类多任务 AI 系统，以智慧城市场景为例，VIMER-UFO 可以用单模型实现人脸识别、人体和车辆ReID等多个任务的 SOTA 效果，同时多任务模型可获得显著优于单任务模型的效果，证明了多任务之间信息借鉴机制的有效性。
 
+![image](https://github.com/StarShang/---CV-26-/assets/51013149/c6037433-8c09-49ee-b0a5-b17ca091151e)
+
+
 
 图片来自论文：2207.10341v1.pdf (arxiv.org)
 
@@ -25,6 +28,7 @@ VIMER-UFO（UFO：Unified Feature Optimization） All in One 多任务训练方�
 
 
 
+![image](https://github.com/StarShang/---CV-26-/assets/51013149/ca569a0b-0858-4307-ab11-ef887beafe38)
 
 
 
@@ -40,9 +44,14 @@ VIMER-UFO（UFO：Unified Feature Optimization） All in One 多任务训练方�
 
 （1）去除语义分割数据导入 的 随机内容变换 ，  保留 resize和 随机填充裁剪
 
+
+
 （2）去除分类数据导入时的自动增强
 
+
 （3）去除目标检测数据导入 RandomShortSideResize和crop
+
+
 
 #### 二、增强网络的正则化表达：
 
@@ -91,6 +100,7 @@ conda activate paddle_conda_env
 训练完成后 model_final.pdmodel 模型保存在outputs\vitbase_joint_training 文件夹中（若不存在，请先创建），后使用以下脚本在测试集上启动预测
 
 sh scripts/test.sh
+
 
 
 
