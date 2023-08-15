@@ -83,8 +83,9 @@ VIMER-UFO（UFO：Unified Feature Optimization） All in One 多任务训练方�
 
 （2）执行命令：
 
-conda activate paddle_conda_env
-      sh scripts/train.sh  
+        conda activate paddle_conda_env
+
+        sh scripts/train.sh  
       
 ![image](https://github.com/StarShang/---CV-26-/assets/51013149/f6d7dcf0-900c-4e9d-ad84-bbcce10bcfc8)
 
@@ -94,8 +95,10 @@ conda activate paddle_conda_env
 （1）参考 《环境说明.txt》 安装虚拟conda环境 命名 paddle_conda_env
 
 （2）执行命令：
-conda activate paddle_conda_env
-      sh scripts/train_device_8_batchsize_16_epoch_200.sh  
+
+         conda activate paddle_conda_env
+         
+         sh scripts/train_device_8_batchsize_16_epoch_200.sh  
 
 
 预测
@@ -103,7 +106,7 @@ conda activate paddle_conda_env
 
 训练完成后 model_final.pdmodel 模型保存在outputs\vitbase_joint_training 文件夹中（若不存在，请先创建），后使用以下脚本在测试集上启动预测
 
-sh scripts/test.sh
+      sh scripts/test.sh
 
 预测日志：
 
