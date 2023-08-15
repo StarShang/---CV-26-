@@ -1,6 +1,6 @@
 # ---CV-26-
-
-请参考说明：原理说明.doc  和 运行说明.doc
+参考：https://github.com/Traffic-X/Open-TransMind/tree/main/PAZHOU/base
+具体请参考说明：原理说明.doc  和 运行说明.doc
 =====
 
 第二届广州·琶洲算法大赛-智能交通CV模型赛题第26名方案
