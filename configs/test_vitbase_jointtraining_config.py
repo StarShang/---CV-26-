@@ -241,6 +241,6 @@ model=L(MultiTaskBatchFuse)(
 
 
 train.amp.enabled = False
-train.init_checkpoint = 'outputs/vitbase_joint_training/0805model_final.pdmodel'
+train.init_checkpoint = 'outputs/vitbase_joint_training/model_final.pdmodel'
 # train.init_checkpoint = 'outputs/model_final.pdmodel'
 train.output_dir = 'outputs/test_vitbase_joint_training'
