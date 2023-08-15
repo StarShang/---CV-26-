@@ -88,7 +88,7 @@ conda activate paddle_conda_env
 预测
 ------
 
-我们提供了我们训练的三任务AllinOne联合训练的权重，可下载权重至pretrained文件夹中（若不存在，请先创建），后使用以下脚本在测试集上启动预测
+训练完成后 model_final.pdmodel 模型保存在outputs\vitbase_joint_training 文件夹中（若不存在，请先创建），后使用以下脚本在测试集上启动预测
 
 sh scripts/test.sh
 
