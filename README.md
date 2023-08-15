@@ -47,6 +47,21 @@ VIMER-UFO（UFO：Unified Feature Optimization） All in One 多任务训练方�
 （1）实现梯度累加策略 ，相当于增加batchsize，不是每次迭代都进行参数更新，再进行梯度清零，而是若干次迭代后再进行此操作。这样可以增加训练速度。
 
 
+数据配置
+
+从官方数据下载地址下载训练和测试数据后，将数据解压到datasets文件夹中（若不存在，请先创建）
+
+训练
+
+使用object365数据集的预训练权重，下载预训练权重至pretrained文件夹中（若不存在，请先创建），后使用以下脚本在训练集上启动训练
+
+sh scripts/train.sh
+
+预测
+
+我们提供了我们训练的三任务AllinOne联合训练的权重，可下载权重至pretrained文件夹中（若不存在，请先创建），后使用以下脚本在测试集上启动预测
+
+sh scripts/test.sh
 
 
 
