@@ -85,6 +85,10 @@ VIMER-UFO（UFO：Unified Feature Optimization） All in One 多任务训练方�
 
 conda activate paddle_conda_env
       sh scripts/train.sh  
+      
+![image](https://github.com/StarShang/---CV-26-/assets/51013149/f6d7dcf0-900c-4e9d-ad84-bbcce10bcfc8)
+
+      
 #### 8卡A100 服务器运行说明：   
 
 （1）参考 《环境说明.txt》 安装虚拟conda环境 命名 paddle_conda_env
@@ -101,6 +105,46 @@ conda activate paddle_conda_env
 
 sh scripts/test.sh
 
+预测日志：
+
+[08/05 09:30:40 ufo]: Full config saved to outputs/test_vitbase_joint_training/config.yaml
+missing keys: []
+unexpected keys: []
+trans: [<data.transforms.seg_transforms.Normalize object at 0x7f6d4e558650>] <class 'omegaconf.listconfig.ListConfig'>
+InferDataset has 1000 samples
+InferDataset has 1000 samples after padding
+rank 1 has 500 items
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+COCOInferDataSet has 3067 samples
+COCOInferDataSet has 3068 samples after padding
+rank 1 has 1534 items
+========== InferDataset ==========
+seg_inference_on_test_dataset
+
+  0%|          | 0/500 [00:00<?, ?it/s]
+  8%|▊         | 38/500 [00:10<02:02,  3.79it/s]
+  8%|▊         | 38/500 [00:20<02:02,  3.79it/s]
+ 18%|█▊        | 89/500 [00:20<01:30,  4.52it/s]
+ 18%|█▊        | 89/500 [00:30<01:30,  4.52it/s]
+ 28%|██▊       | 139/500 [00:30<01:16,  4.72it/s]
+ 38%|███▊      | 190/500 [00:40<01:04,  4.84it/s]
+ 48%|████▊     | 241/500 [00:50<00:53,  4.88it/s]
+ 58%|█████▊    | 291/500 [01:00<00:42,  4.91it/s]
+ 69%|██████▊   | 343/500 [01:10<00:31,  4.99it/s]
+ 79%|███████▉  | 395/500 [01:21<00:21,  4.98it/s]
+ 89%|████████▉ | 445/500 [01:31<00:11,  4.95it/s]
+ 99%|█████████▉| 497/500 [01:41<00:00,  5.02it/s]
+100%|██████████| 500/500 [01:42<00:00,  4.89it/s]
+========== FGVCInferDataset ==========
+========== COCOInferDataSet ==========
+['/home/shangzaixing/code/PAZHOUbase', '/opt/anaconda3/envs/paddle_pz/lib/python37.zip', '/opt/anaconda3/envs/paddle_pz/lib/python3.7', '/opt/anaconda3/envs/paddle_pz/lib/python3.7/lib-dynload', '/opt/anaconda3/envs/paddle_pz/lib/python3.7/site-packages', '/opt/anaconda3/envs/paddle_pz/lib/python3.7/site-packages/paddle/fluid/proto', '/home/shangzaixing/code/PAZHOUbase/']
+['/home/shangzaixing/code/PAZHOUbase', '/opt/anaconda3/envs/paddle_pz/lib/python37.zip', '/opt/anaconda3/envs/paddle_pz/lib/python3.7', '/opt/anaconda3/envs/paddle_pz/lib/python3.7/lib-dynload', '/opt/anaconda3/envs/paddle_pz/lib/python3.7/site-packages', '/opt/anaconda3/envs/paddle_pz/lib/python3.7/site-packages/paddle/fluid/proto', '/home/shangzaixing/code/PAZHOUbase/']
+/home/shangzaixing/code/PAZHOUbase/detectron2/data/transforms/transform.py:46: DeprecationWarning: LINEAR is deprecated and will be removed in Pillow 10 (2023-07-01). Use BILINEAR or Resampling.BILINEAR instead.
+  def __init__(self, src_rect, output_size, interp=Image.LINEAR, fill=0):
+rank is 1, world size is 2
 
 
 
