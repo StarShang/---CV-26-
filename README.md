@@ -2,7 +2,7 @@
 
 
 
-第二届广州·琶洲算法大赛-智能交通CV模型赛题第26名方案
+第二届广州·琶洲算法大赛-智能交通CV模型赛题第8名方案
 =====
 
 参考自：https://github.com/Traffic-X/Open-TransMind/tree/main/PAZHOU/base
